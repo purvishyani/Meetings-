@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookings</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Jost:wght@300;400&family=Lexend&family=PT+Sans&family=Poppins:wght@200;400;600&family=Roboto&family=Rubik&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body onload="displayEvents()">
+    <section class="nav-color">
+        <div class="container ">
+            <div class="header">
+                <div class="header-content">
+                    <h4>Bookings</h4>
+                </div>
+                <div class="header-content">
+                    <div class="btn-new-event">
+                        <button id="btn-add-event" class="btn btn-dark" data-bs-toggle="modal"
+                            data-bs-target="#newEvent">New
+                            Event</button>
+                    </div>
+                    <div class="logged-user">
+                        <a href="#" class="user-name" id="btn-initials" data-bs-toggle="dropdown"
+                            aria-expanded="false"></a>
+                        <div class="dropdown-menu" aria-labelledby="btn-initials">
+                            <a class="dropdown-item" href="#" id="btn-logout">Log out</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="tab-content-wrapper">
+                <nav class="tab-header">
+                    <div class="nav nav-pills" id="nav-tab" role="tablist">
+                        <button class="nav-link active" id="btn-upcoming" data-bs-toggle="tab"
+                            data-bs-target="#nav-upcoming" type="button" role="tab" aria-controls="nav-home"
+                            aria-selected="false">Upcoming</button>
+
+                        <button class="nav-link" id="btn-ongoing" data-bs-toggle="tab" data-bs-target="#nav-ongoing"
+                            type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Ongoing</button>
+
+                        <button class="nav-link" id="btn-cancelled" data-bs-toggle="tab" data-bs-target="#nav-cancelled"
+                            type="button" role="tab" aria-controls="nav-contact"
+                            aria-selected="false">Cancelled</button>
+
+                        <button class="nav-link" id="btn-completed" data-bs-toggle="tab" data-bs-target="#nav-completed"
+                            type="button" role="tab" aria-controls="nav-contact"
+                            aria-selected="false">Completed</button>
+                    </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-upcoming" role="tabpanel"
+                        aria-labelledby="nav-home-tab" tabindex="0">
+                    </div>
+                    <div class="tab-pane fade" id="nav-ongoing" role="tabpanel" aria-labelledby="nav-profile-tab"
+                        tabindex="1">Ongoing event</div>
+                    <div class="tab-pane fade" id="nav-cancelled" role="tabpanel" aria-labelledby="nav-contact-tab"
+                        tabindex="2">cancelled event</div>
+                    <div class="tab-pane fade" id="nav-completed" role="tabpanel" aria-labelledby="nav-disabled-tab"
+                        tabindex="3">completed event</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="newEvent" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <form id="form-home">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modal-title">
+
+                        </h5>
+                        <button type="button" class="close btn btn-dark" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="outer-box">
+                            <div class="row inner-content">
+                                <div class="col">
+                                    <label>Event Name</label>
+                                    <input id="event-name" type="text" class="form-control" placeholder="Event title">
+                                </div>
+                            </div>
+                            <div class="row inner-content">
+                                <div class="col">
+                                    <label>Date</label>
+                                    <input type="date" class="form-control" id="event-date" >
+                                </div>
+                            </div>
+                            <div class="row inner-content">
+                                <div class="col-6">
+                                    <label>Start time</label>
+                                    <input type="time" class="form-control" id="event-start-time">
+                                </div>
+                                <div class="col-6">
+                                    <label>End time</label>
+                                    <input type="time" class="form-control" id="event-end-time" >
+                                </div>
+                            </div>
+                            <div class="row inner-content">
+                                <div class="col">
+                                    <div class="btn-select-user ">
+                                        <button class="btn btn-light" id="selectUser" data-bs-toggle="dropdown"
+                                            aria-expanded="false">Select Participants
+                                            &nbsp<i class="fa-solid fa-angle-down fa-sm"></i></button>
+                                        <div id="dropdown-select-user" class="dropdown-menu"
+                                            aria-labelledby="selectUser">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+
+                        </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+   
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

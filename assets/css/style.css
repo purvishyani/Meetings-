@@ -1,0 +1,222 @@
+body {
+
+    background-color: #eeeeee;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+*,
+:before,
+:after {
+    box-sizing: border-box;
+}
+
+.content-wrapper {
+    background-color: rgb(255, 255, 255);
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 40%;
+    box-shadow: 0px 0px 7px 7px #e4e4e4;
+    margin: 3rem 0;
+}
+
+.title {
+    text-align: center;
+    margin: 1rem auto;
+}
+
+.title h1 {
+    font-weight: bold;
+}
+
+.inner-content {
+    margin: 1rem 0;
+}
+
+.outer-box {
+    margin-top: 2rem;
+    font-size: 0.8rem;
+}
+
+::placeholder {
+    font-size: 0.8rem;
+    color: rgb(192, 192, 192);
+}
+
+label {
+    font-weight: bold;
+}
+
+.btn-register {
+    width: 100%;
+    margin: 1rem auto;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.link-login {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* HOME PAGE */
+
+.header {
+
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+}
+.header-content{
+    display: flex;
+    align-items: center;
+}
+.header-content h4{
+    color: black;
+    margin:0;
+    font-weight: bold;
+}
+.nav-color {
+    background-color: #ebe8e8;
+    color: white;
+    box-shadow: 0px 0px 20px 1px #cccccc;
+}
+
+.btn-new-event {
+    margin: auto 0.5rem;
+}
+
+.btn {
+    font-size: 0.8rem;
+}
+
+.logged-user a {
+    text-decoration: none;
+}
+
+.user-name {
+    background-color: rgb(255, 255, 255);
+    color: #b2b1b1;
+    padding: 0.7rem;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.tab-content-wrapper {
+    background-color: white;
+    border-radius: 1rem;
+    margin: 3rem 0;
+    padding: 1rem;
+    box-shadow: 0px 0px 9px 2px #cccccc;
+}
+.tab-header{
+    background-color:#ebe8e8;
+    width: 40%;
+    border-radius: 0.5rem;
+}
+.nav-link{
+    padding:0.3rem 1rem;;
+    margin:0.4rem;
+    font-size: 0.9rem;
+    color:black;
+}
+.nav-pills .nav-link.active{
+    background-color: white;
+    color:black
+}
+.tab-content{
+  
+    margin-top:1rem;
+}
+.inner-tab-content{
+    border:1px solid #ebe8e8;
+    border-radius: 0.5rem;
+    padding:0.5rem;
+    font-size: 0.9rem;
+}
+.show-date{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.show-time{
+    display: flex;
+    flex-direction: column;
+}
+.show-meeting{
+    display: flex;
+    flex-direction: column;
+}
+.show-meeting .user-name{
+    background-color: rgb(236 234 234);
+    color: #6b6b6b;
+    height: 1rem;
+    width: 1rem;
+    font-size: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-edit{
+    display: flex;
+    justify-content: flex-end;
+}
+.btn-edit .btn-light{
+    padding: 0.6rem 1.2rem;
+}
+.btn-light:hover{
+    background-color: black;
+    color: white;
+}
+.dropdown-menu{
+    padding:0.3rem;
+}
+.dropdown-item{
+    border-radius:0.5rem;
+    font-size: 0.8rem;
+   
+}
+.display-date{
+    font-size: 2rem;
+}
+.display-day{
+    font-size: 0.8rem;
+}
+
+/* MODAL */
+.modal-body .outer-box{
+    margin:0;
+}
+.modal{
+    --bs-modal-border-radius: 1rem;
+}
+
+.items{
+    display: flex;
+    font-size: 0.8rem;
+    margin:0.5rem;
+}
+.items .dropdown-item{
+    margin:0 0.5rem;
+     width: 1rem;
+}
+
+
+input[type=time]::-webkit-datetime-edit-ampm-field {
+    display: none;
+  }
+
+  
+input[type=time]::-webkit-clear-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance:none;
+    appearance: none;
+    margin: -10px;
+  }
